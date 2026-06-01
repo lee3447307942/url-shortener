@@ -53,9 +53,9 @@ public class AuthController {
             resp.put("token", token);
             resp.put("user", user);
             return ResponseEntity.ok(resp);
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             Map<String, Object> err = new HashMap<>();
-            err.put("error", e.getMessage());
+            err.put("error", e.getMessage() != null ? e.getMessage() : "注册失败，请稍后重试");
             return ResponseEntity.badRequest().body(err);
         }
     }
@@ -70,9 +70,9 @@ public class AuthController {
             resp.put("token", token);
             resp.put("user", user);
             return ResponseEntity.ok(resp);
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             Map<String, Object> err = new HashMap<>();
-            err.put("error", e.getMessage());
+            err.put("error", e.getMessage() != null ? e.getMessage() : "登录失败，请稍后重试");
             return ResponseEntity.badRequest().body(err);
         }
     }

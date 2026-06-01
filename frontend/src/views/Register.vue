@@ -64,9 +64,11 @@ const handleRegister = async () => {
   align-items: center;
   justify-content: center;
   background: #f5f5f5;
+  padding: 16px;
 }
 .auth-card {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
 }
 h2 {
   text-align: center;
@@ -76,5 +78,19 @@ h2 {
   text-align: center;
   margin-top: 12px;
   color: #666;
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 12px;
+  }
+  .auth-card {
+    max-width: 100%;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
 }
 </style>

@@ -69,6 +69,7 @@ body { background: #f5f5f5; font-family: -apple-system, sans-serif; }
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding: 0 16px;
 }
 .logo {
   font-size: 18px;
@@ -84,5 +85,22 @@ body { background: #f5f5f5; font-family: -apple-system, sans-serif; }
 .username {
   color: #666;
   font-size: 14px;
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .header-content {
+    height: 50px;
+    padding: 0 12px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .nav-right {
+    gap: 8px;
+  }
+  .username {
+    display: none;
+  }
 }
 </style>

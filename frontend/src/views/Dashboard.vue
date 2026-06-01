@@ -378,4 +378,16 @@ h1 { text-align: center; margin-bottom: 24px; }
 .safe-tip.high { background: #fef0f0; color: #f56c6c; }
 .chart-container { height: 300px; margin-bottom: 20px; }
 .analytics-content { max-height: 600px; overflow-y: auto; }
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .container { padding: 12px; }
+  h1 { font-size: 20px; margin-bottom: 16px; }
+  .card-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .chart-container { height: 200px; }
+}
 </style>
