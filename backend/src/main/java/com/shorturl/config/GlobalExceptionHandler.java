@@ -14,6 +14,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, Object>> handleException(Exception e) {
         Map<String, Object> err = new HashMap<>();
         err.put("error", e.getMessage() != null ? e.getMessage() : "服务器内部错误");
+        err.put("type", e.getClass().getSimpleName());
         return ResponseEntity.status(500).body(err);
     }
 }
