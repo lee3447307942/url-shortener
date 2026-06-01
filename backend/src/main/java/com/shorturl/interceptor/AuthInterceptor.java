@@ -22,7 +22,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 
         // 放行不需要认证的接口
         String uri = request.getRequestURI();
-        if (uri.equals("/api/login") || uri.equals("/api/register") || uri.equals("/api/check-safe")) {
+        if (uri.equals("/api/login") || uri.equals("/api/register") || uri.equals("/api/check-safe") || uri.equals("/api/init-db")) {
             return true;
         }
 
