@@ -56,6 +56,7 @@ public class AuthController {
         } catch (Exception e) {
             Map<String, Object> err = new HashMap<>();
             err.put("error", e.getMessage() != null ? e.getMessage() : "注册失败，请稍后重试");
+            err.put("type", e.getClass().getSimpleName());
             return ResponseEntity.badRequest().body(err);
         }
     }
